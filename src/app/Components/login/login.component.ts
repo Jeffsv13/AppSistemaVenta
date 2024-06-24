@@ -40,7 +40,7 @@ export class LoginComponent {
 
     this.accessoService.iniciarSesion(objeto).subscribe({
       next:(data) =>{
-        if(data.status){
+        if(data.resultado){
           //localStorage.setItem("token",data.token)
           this.utilidadServicio.guardarSesionUsuario(data.value);
           this.router.navigate(["pages"])
